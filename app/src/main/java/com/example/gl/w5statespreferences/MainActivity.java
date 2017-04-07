@@ -1,5 +1,6 @@
 package com.example.gl.w5statespreferences;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
@@ -94,5 +95,11 @@ public class MainActivity extends AppCompatActivity {
         super.onRestoreInstanceState(bundle);
         counter = bundle.getInt("counter");
         Log.i("IBR", "onRestoreInstance is called");
+    }
+
+    public void switchActivity(View view) {
+        Intent intent = new Intent(this,AnotherActivity.class);
+        startActivity(intent);
+
     }
 }
